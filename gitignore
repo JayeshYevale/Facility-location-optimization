@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Gurobi artefacts
+*.lp
+*.mps
+*.sol
+gurobi.log
+gurobi.lic
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

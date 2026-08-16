@@ -1,0 +1,21 @@
+# Core scientific stack
+numpy>=1.24
+pandas>=2.0
+
+# Convex optimization -- notebook 1
+scipy>=1.10
+
+# Static charts -- notebooks 1 and 2
+matplotlib>=3.7
+
+# Mixed-integer programming -- notebooks 2 and 3
+# The pip build ships a size-limited license (2000 variables / 2000 constraints),
+# which is well beyond what these models need.
+gurobipy>=11.0
+
+# Interactive network map and sensitivity charts -- notebook 3
+plotly>=5.20
+
+# Notebook environment
+jupyterlab>=4.0
+ipykernel>=6.0
