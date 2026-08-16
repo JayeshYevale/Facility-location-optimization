@@ -16,7 +16,7 @@ without installing a solver.
 ### 1. [Single-Facility Siting: Weighted Median Problem and the Gravity Model](01_single_facility_siting_gravity_model.ipynb)
 
 Siting one new plant to minimise total weighted transportation cost against 11 existing
-facilities — six suppliers and five distributors — each with its own freight rate and
+facilities, six suppliers and five distributors, each with its own freight rate and
 shipment volume. The problem is solved two ways and the results compared: directly as a
 convex nonlinear program, and iteratively with the gravity model (Weiszfeld's algorithm)
 started from the origin.
@@ -30,7 +30,7 @@ started from the origin.
 | Convex optimum | (298.95, 260.75) | $36,755.49 |
 | Gravity model, 10 iterations | (299.15, 261.27) | $36,755.63 |
 
-The two methods agree to within $0.14 — a relative gap under 0.0004% — and the gravity
+The two methods agree to within $0.14, a relative gap under 0.0004%, and the gravity
 model lands within about a mile of the optimum after a single iteration. Siting the plant
 at the origin instead would cost roughly $121,000, so the siting decision is worth about
 two-thirds of the freight bill.
@@ -40,8 +40,8 @@ two-thirds of the freight bill.
 ### 2. [Capacitated Plant Location with Discrete Capacity Tiers](02_capacitated_plant_location_mip.ipynb)
 
 An electronics company choosing where to build plants to supply nine markets. Seven
-candidate sites are available, and each can host any subset of three capacity tiers — low,
-medium and high — so capacity at a site is built up in discrete blocks rather than chosen
+candidate sites are available, and each can host any subset of three capacity tiers: low,
+medium and high, so capacity at a site is built up in discrete blocks rather than chosen
 from a menu. The base model is solved, then re-solved under three independent policy
 restrictions and priced against the unrestricted optimum.
 
@@ -67,7 +67,7 @@ either, driven by longer hauls rather than by fixed cost.
 
 A distribution business choosing which of six candidate distribution centres to open to
 serve five regional demand clusters, subject to a cap on how many DCs the network may run.
-Lane costs are derived from geography — distances are computed with the haversine formula
+Lane costs are derived from geography, the distances are computed with the haversine formula
 from site coordinates rather than entered by hand. Includes two sensitivity studies and a
 look at formulation strength.
 
