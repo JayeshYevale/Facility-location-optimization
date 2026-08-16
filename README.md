@@ -5,7 +5,7 @@ with SciPy and Gurobi. Three notebooks, ordered by scope: siting a single facili
 choosing plants and market assignments under competing policy constraints, then designing
 a distribution network with sensitivity analysis.
 
-Each notebook is self-contained — data is defined inline, and every result is reproduced by
+Each notebook is self-contained, the data is defined inline, and every result is reproduced by
 running the notebook top to bottom. Outputs are committed, so the models can be read
 without installing a solver.
 
@@ -21,7 +21,7 @@ shipment volume. The problem is solved two ways and the results compared: direct
 convex nonlinear program, and iteratively with the gravity model (Weiszfeld's algorithm)
 started from the origin.
 
-**Model:** continuous nonlinear — weighted Weber / weighted median problem, Euclidean distances
+**Model:** Continuous nonlinear — weighted Weber / weighted median problem, Euclidean distances
 
 ![Optimal plant site and its network](figures/single_facility_siting.png)
 
@@ -45,7 +45,7 @@ medium and high — so capacity at a site is built up in discrete blocks rather 
 from a menu. The base model is solved, then re-solved under three independent policy
 restrictions and priced against the unrestricted optimum.
 
-**Model:** mixed-integer linear program — binary build variables linked to continuous flows through the capacity constraint
+**Model:** Mixed-integer linear program — binary build variables linked to continuous flows through the capacity constraint
 
 ![Policy comparison](figures/plant_location_policy_comparison.png)
 
@@ -71,7 +71,7 @@ Lane costs are derived from geography — distances are computed with the havers
 from site coordinates rather than entered by hand. Includes two sensitivity studies and a
 look at formulation strength.
 
-**Model:** capacitated facility location with a cardinality constraint
+**Model:** Capacitated facility location with a cardinality constraint
 
 ![Optimal DC network](figures/warehouse_network_map.png)
 
@@ -88,13 +88,13 @@ Optimal network at a four-site cap — Joliet IL, Columbus OH, Fort Worth TX, Re
   additional DC buys back expensive miles.
 - Capacity, not cost, sets the minimum footprint: fewer than four DCs is infeasible. The
   fifth site is worth about $155,000 a year; a sixth is worth nothing.
-- Nearest-DC assignment is not optimal — capacity limits split Atlanta across two DCs and
+- Nearest-DC assignment is not optimal, the capacity limits split Atlanta across two DCs and
   push part of Phoenix onto a farther site because the nearer one is full.
 - The optimal footprint shifts from four DCs to five as the line-haul rate rises past
   roughly $0.006 per unit-mile, so the useful deliverable is a threshold rather than a
   single point answer.
 - Adding lane-level variable upper bounds cuts the LP integrality gap from 8.4% to 0.6%
-  without changing the optimal solution — a reformulation that matters for runtime once
+  without changing the optimal solution, a reformulation that matters for runtime once
   the network grows beyond a handful of sites.
 
 ---
@@ -118,8 +118,8 @@ pip install pandas numpy matplotlib scipy gurobipy plotly jupyterlab
 ### Solver
 
 Notebooks 2 and 3 use Gurobi. The `pip install gurobipy` package ships with a size-limited
-licence covering models up to 2,000 variables and 2,000 constraints — well beyond what
-these instances need — so no separate licence is required to reproduce the results.
+licence covering models up to 2,000 variables and 2,000 constraints, well beyond what
+these instances need, so no separate licence is required to reproduce the results.
 Notebook 1 uses only SciPy and needs no solver.
 
 Both mixed-integer models translate directly to `pulp` with CBC or to `python-mip` if you
@@ -142,7 +142,7 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-All data is defined inline in the notebooks — these instances are small enough that keeping
+All data is defined inline in the notebooks, these instances are small enough that keeping
 the data beside the model is clearer than loading it from separate files.
 
 ---
