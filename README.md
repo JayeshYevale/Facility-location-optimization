@@ -106,7 +106,7 @@ Optimal network at a four-site cap — Joliet IL, Columbus OH, Fort Worth TX, Re
 | `pandas` | data tables and solution reporting | 1, 2, 3 |
 | `numpy` | numerical arrays, haversine distances | 1, 2, 3 |
 | `matplotlib` | static charts | 1, 2 |
-| `scipy` | convex optimisation (`scipy.optimize.minimize`) | 1 |
+| `scipy` | convex optimization (`scipy.optimize.minimize`) | 1 |
 | `gurobipy` | mixed-integer programming | 2, 3 |
 | `plotly` | interactive network map and sensitivity charts | 3 |
 | `jupyterlab` | running the notebooks | 1, 2, 3 |
