@@ -136,8 +136,8 @@ them, run the notebook locally or paste its URL into [nbviewer.org](https://nbvi
 ## Running the notebooks
 
 ```bash
-git clone https://github.com/JayeshYevale/facility-location-optimization.git
-cd facility-location-optimization
+git clone https://github.com/JayeshYevale/Facility-Location-Optimization.git
+cd Facility-Location-Optimization
 pip install -r requirements.txt
 jupyter lab
 ```
@@ -150,7 +150,7 @@ the data beside the model is clearer than loading it from separate files.
 ## Repository layout
 
 ```
-facility-location-optimization/
+Facility-Location-Optimization/
 ├── 01_single_facility_siting_gravity_model.ipynb
 ├── 02_capacitated_plant_location_mip.ipynb
 ├── 03_warehouse_network_design_mip.ipynb
