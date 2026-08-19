@@ -136,7 +136,7 @@ them, run the notebook locally or paste its URL into [nbviewer.org](https://nbvi
 ## Running the notebooks
 
 ```bash
-git clone https://github.com/<your-username>/facility-location-optimization.git
+git clone https://github.com/JayeshYevale/facility-location-optimization.git
 cd facility-location-optimization
 pip install -r requirements.txt
 jupyter lab
